@@ -31,7 +31,7 @@ public final class Polynome
         }
     }
 
-    //In java, ref for all variables?
+    //In java, ref for all variables
     public Polynome(HashMap<Integer, Double> polynomialTerms)
     {
         _polynomialTerms = new HashMap<>(polynomialTerms);
@@ -66,7 +66,7 @@ public final class Polynome
 
     public Integer getHighestDegree()
     {
-        return Polynome.getHighestDegree(_polynomialTerms, null);
+        return Polynome.getHighestDegree(_polynomialTerms);
     }
 
     private static Integer getHighestDegree(HashMap<Integer, Double> hashMap)
