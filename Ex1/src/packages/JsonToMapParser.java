@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-public class JsonToMapParser
+public final class JsonToMapParser
 {
     private static final Logger _logger = Logger.getLogger(JsonToMapParser.class.getName());
 

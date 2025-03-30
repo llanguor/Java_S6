@@ -9,15 +9,15 @@ public class Main
         try
         {
             var dir = "Ex1/src/resources/";
-            var bracketMap = JsonToMapParser.parse(String.format("%s%s", dir, "config.json"));
+            var bracketMap = JsonToMapParser.parse(String.format("%sconfig.json", dir));
             var result = BracketFileBypass.findWrongBracketPosition(
-                    String.format("%s%s", dir, "text.txt"),
+                    String.format("%stext.txt", dir),
                     bracketMap);
 
             if (result == -1)
                 System.out.print("Input text is correct");
             else
-                System.out.print("Error! Incorrect symbol on position " + result);
+                System.out.printf("Error! Incorrect symbol on position %s", result);
         }
         catch (IOException e)
         {

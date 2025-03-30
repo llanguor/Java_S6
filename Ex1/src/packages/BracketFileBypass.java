@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Stack;
 import java.util.logging.Logger;
 
-public class BracketFileBypass
+public final class BracketFileBypass
 {
     private static final Logger _logger = Logger.getLogger(BracketFileBypass.class.getName());
 
@@ -27,6 +27,7 @@ public class BracketFileBypass
                 //      If popped value is left-side version from current bracket - it's ok
                 //      If not - error. Return current position on text
                 //      If stack is empty - error. Return current position on text
+
                 if(bracketMap.containsValue(character))
                 {
                     bracketStack.push(character);
