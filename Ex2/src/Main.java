@@ -1,24 +1,23 @@
-import packages.Polynome;
+import packages.Polynomial;
+
+import java.util.HashMap;
 
 public class Main
 {
     public static void main(String[] args) throws CloneNotSupportedException
     {
-        var p1 = new Polynome(3,3,3,3);
-        var p2 = new Polynome(5,5,5,5);
+        var p1 = new Polynomial(3,3,3,3);
+        var p2 = new Polynomial(5,5,5,5);
 
+        var res = Polynomial.divide(p1, p2);
 
-        var res = Polynome.divide(p1, p2);
+        System.out.printf("First polynomial: %s\n", p1);
+        System.out.printf("Second polynomial: %s\n", p2);
+        System.out.printf("Divide result: %s\n", res);
 
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(res.first);
-        System.out.println(res.second);
         //System.out.println(result._result);
        // System.out.println(result._quotient);
 
-        System.out.println(p1.compareTo(p2));
-
-
+        System.out.printf("Compare result: %s", p1.compareTo(p2));
     }
 }

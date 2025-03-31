@@ -7,12 +7,12 @@ import java.util.logging.Logger;
 
 public final class BracketFileBypass
 {
-    private static final Logger _logger = Logger.getLogger(BracketFileBypass.class.getName());
-
-
     public static int findWrongBracketPosition(String pathToFile, HashMap<Integer, Integer> bracketMap)
-            throws IOException
+            throws IOException, IllegalArgumentException
     {
+        if(bracketMap==null || bracketMap.isEmpty())
+            throw new IllegalArgumentException("Incorrect brackets map");
+
         Stack<Integer> bracketStack = new Stack<>();
 
         try(FileReader fr = new FileReader(pathToFile))

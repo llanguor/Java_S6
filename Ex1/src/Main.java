@@ -15,13 +15,13 @@ public class Main
                     bracketMap);
 
             if (result == -1)
-                System.out.print("Input text is correct");
+                System.err.print("Input text is correct");
             else
-                System.out.printf("Error! Incorrect symbol on position %s", result);
+                System.err.printf("Error! Incorrect symbol on position %s", result);
         }
-        catch (IOException e)
+        catch (IOException | IllegalArgumentException e)
         {
-            System.out.print(e.getMessage());
+            System.err.print(e.getMessage());
         }
     }
 }

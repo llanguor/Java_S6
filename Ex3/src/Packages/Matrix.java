@@ -17,6 +17,9 @@ public final class Matrix
 
     public static int[][] randomize(int rows, int cols)
     {
+        if(rows<1 || cols<1)
+            throw new IllegalArgumentException("Incorrect size of array");
+        
         List<Integer> numbers = new ArrayList<>();
         for(int i=0; i<rows*cols; ++i)
         {
@@ -37,6 +40,9 @@ public final class Matrix
 
     public static int[][] initFromString(String input, int rows, int cols)
     {
+        if(rows<1 || cols<1)
+            throw new IllegalArgumentException("Incorrect size of array");
+
         if(!input.matches("\\d+"))
             throw new IllegalArgumentException("Incorrect input. Values must be numbers");
 

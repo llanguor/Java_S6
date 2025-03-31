@@ -15,25 +15,26 @@ public class Main
             System.out.print("\nEnter numbers in array (r - random generation, e - exit)\n");
             input = in.nextLine();
 
-            switch (input)
+            try
             {
-                case "e":
-                    return;
+                switch (input)
+                {
+                    case "e":
+                        return;
 
-                case "r":
-                    matrix = Matrix.randomize(3,3);
-                    break;
+                    case "r":
+                        matrix = Matrix.randomize(3,3);
+                        break;
 
-                default:
-                    try
-                    {
+                    default:
                         matrix = Matrix.initFromString(input, 3, 3);
-                    }
-                    catch (IllegalArgumentException e)
-                    {
-                        System.err.println(e.getMessage());
-                        continue;
-                    }
+
+                }
+            }
+            catch (IllegalArgumentException e)
+            {
+                System.err.println(e.getMessage());
+                continue;
             }
 
             Matrix.print(matrix);

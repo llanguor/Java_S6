@@ -3,6 +3,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -10,8 +12,6 @@ import java.util.logging.Logger;
 
 public final class JsonToMapParser
 {
-    private static final Logger _logger = Logger.getLogger(JsonToMapParser.class.getName());
-
     public static HashMap<Integer, Integer> parse(String pathToFile)
             throws IOException
     {

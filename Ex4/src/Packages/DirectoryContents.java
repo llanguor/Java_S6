@@ -60,7 +60,7 @@ public final class DirectoryContents implements Iterable<Path>
         public Builder setMaxDepth(int maxDepth) throws  IllegalArgumentException
         {
             if(maxDepth<1)
-                throw new IllegalArgumentException("Max depth can't be lower then 1");
+                throw new IllegalArgumentException("Max depth can't be lower than 1");
 
             _maxDepth = maxDepth;
             return this;
@@ -86,7 +86,7 @@ public final class DirectoryContents implements Iterable<Path>
             }
             catch (IllegalArgumentException e)
             {
-                throw new IllegalArgumentException("Max depth can't be lower then 1");
+                throw new IllegalArgumentException("Max depth can't be lower than 1");
             }
 
         }
